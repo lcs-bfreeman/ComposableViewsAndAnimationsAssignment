@@ -26,11 +26,7 @@ struct CustomComposableDescriptionView: View {
                         .bold()
                         .padding(.top)
                     
-                    Text("""
-                        Replace this with a description of how to use this view.
-
-                        If the view accepts a parameter, provide a control to enter the input below.
-                        """)
+                    Text("Type the text you want to dispay into the text field below.")
                     
                     TextField("Enter an input value", text: $phrase)
                     
@@ -39,7 +35,7 @@ struct CustomComposableDescriptionView: View {
                 
             }
             
-            NavigationLink(destination: CustomComposableView()) {
+            NavigationLink(destination: CustomComposableView(text: phrase)) {
                 SimpleListItemView(title: "My Composable View",
                                    caption: "A brief description of my view")
             }
